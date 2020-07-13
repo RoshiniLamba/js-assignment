@@ -1,0 +1,26 @@
+<html>
+    <head> 
+        <title>Current Date</title> 
+    </head>
+    <body>
+        <h2>JS code to get current date in dd/mm/yyyy , dd-mm-yyyy or mm/dd/yyyy, mm-dd-yyyy</h2> 
+        <script>
+           function dateFunction(space){
+               var date = new Date();
+               var dd = date.getDate();
+               var mm = date.getMonth();
+               var yyyy = date.getFullYear();
+               return (dd+space+mm+space+yyyy);
+           }
+           function curDate(space){
+            var date = new Date();
+               var dd = date.getDate();
+               var mm = date.getMonth();
+               var yyyy = date.getFullYear();
+               return (mm+space+dd+space+yyyy);
+           }
+           document.write(dateFunction('/')+ "<br/>"+ dateFunction('-')+"<br/>");
+           document.write(curDate('/')+"<br/>"+curDate('-'));
+        </script>
+    </body>
+</html>
