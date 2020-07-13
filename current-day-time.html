@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title> Current Day and Time</title>
+</head>
+
+<body>
+    <h2>JS Code to Print Current Day and Time</h2>
+    <script>
+        var date = new Date();
+        /*   document.write(date); // displays current day , date and time. */
+        var day = date.getDay();
+        var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        document.write("Today is : " + weekdays[day] + "<br/>"); // Prints the current day
+        var hours = date.getHours();
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        var curHour = hours >= 12 ? 'PM' : 'AM';
+        var minutes = date.getMinutes();
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        var curTime = hours + " " + curHour + " : " + minutes +
+            " : " + date.getMilliseconds();
+        document.write("Current time is : " + curTime); 
+    </script>
+</body>
+
+</html>
