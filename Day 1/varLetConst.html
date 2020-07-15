@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference between VAr, Let, and Const</title>
+</head>
+
+<body>
+    <table border="1" cellspacing="5" cellpadding="5">
+        <tr>
+            <th> Var</th>
+            <th>Let</th>
+            <th> Const </th>
+        </tr>
+        <tr>
+            <td>These are globally scoped or funciton scope</td>
+            <td> These are blocked Scope </td>
+            <td> These are blocked scope</td>
+        </tr>
+        <tr>
+            <td>var variables can be updated and re-declared within its scope</td>
+            <td>let variables can be updated but not re-declared</td>
+            <td>const variables can neither be updated nor re-declared</td>
+        </tr>
+        <tr>
+            <td>var variables are initialized with undefined</td>
+            <td>let variables are not initialized</td>
+            <td>const variables are not initialized</td>
+        </tr>
+        <tr>
+            <td>var can be declared without being initialized</td>
+            <td>let can be declared without being initialized</td>
+            <td>const must be initialized during declaration</td>
+        </tr>
+        <tr>
+            <td>
+                Example : <br>
+                var greeter;<br>
+                console.log(greeter);<br>
+                greeter = "hey hi";<br>
+                console.log(greeter);<br>
+                }
+                <script>
+                    var greeter;
+                    console.log(greeter);
+                    greeter = "hey hi";
+                    console.log(greeter);
+                </script>
+            </td>
+            <td>
+                Example:
+                let greeting = "say Hi";<br>
+                if (true) { <br>
+                let greeting = "say Hello instead";<br>
+                console.log(greeting); // "say Hello instead"<br>
+                }<br>
+                console.log(greeting); // "say Hi"<br>
+                <script>
+                    let greeting = "say Hi";
+                    if (true) {
+                        let greeting = "say Hello instead";
+                        console.log(greeting); // "say Hello instead"
+                    }
+                    console.log(greeting); // "say Hi"
+                </script>
+            </td>
+            <td>
+                const person = {
+                    name: 'Joseph',
+                    age: 33
+                }
+                <script>
+                    const person = {
+                        name: 'Joseph',
+                        age: 33
+                    }
+                </script>
+            </td>
+        </tr>
+    </table>
+<p> Attached outputs for var , let and const </p>
+<p> For var <br>
+<img src="var.png" width="100%"> <br><br>
+For Let <br> <br>
+<img src="let.png" width="100%"> <br><br>
+For Cosnt <br> <br>
+<img src="const.png" width="100%"> <br>
+</p>
+</body>
+
+</html>

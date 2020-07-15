@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Various Methods of Console Function</title>
+</head>
+
+<body>
+    <h2> Console In JavaScript </h2>
+    <p> The <i><b> console</b></i> object provides access to Browser's debugging console. It can be accessed from any
+        global object. It is used for debugging, testing, to check code, or perform any calculations(can be done in any
+        of the browser's debugging console) etc. </p>
+    <h3>Various Methods of Console</h3>
+    <ul>
+        <li><a href="#log"> log() </a></li>
+        <li><a href="#error">error()</a></li>
+        <li><a href="#warn">warn()</a></li>
+        <li><a href="#clear">clear()</a></li>
+        <li><a href="#time">time() and timeEnd()</a></li>
+        <li><a href="#table">table()</a></li>
+        <li><a href="#count">count()</a></li>
+    </ul> <br> <br>
+    <h3 style="text-align: center;"> <a id="log">console.log()</a></h3>
+    <p> console.log is mainly used to log(print) the outpu to the console. <br> We can put any type inside log() i.e.
+        string,object, array boolean etc <br>
+        <!-- console.log() method  -->
+        var a = 12; <br>
+        var b = 13; <br>
+        var c = a + b; <br>
+        console.log(c); <br>
+        <br><br>
+        var fruits = ["apple", "mango", "banana"]; <br>
+        console.log(fruits); <br>
+        <img src="console.log().png" width="100%" height="400" />
+    </p>
+    <script>
+        var a = 12;
+        var b = 13;
+        var c = a + b;
+        console.log(c);
+
+        var fruits = ["apple", "mango", "banana"];
+        console.log(fruits);
+    </script>
+    <h3 style="text-align: center;"> <a id="error">console.error()</a></h3>
+    <p> console.error is used to log error message to the console. <b>Useful in testing of code.</b> By default the
+        error message will be highlighted with red colour<br>
+        ex : console.error('this is a simple error'); <br>
+        console.error("Error in line 54:11"); <br> <br>
+        <img src="console.error.png" width="100%" height="400" />
+    </p>
+    <script>
+        console.error("this is a simple error");
+        console.error("Error in line 54:11");
+    </script>
+    <h3 style="text-align: center;"> <a id="warn">console.warn()</a></h3>
+    <p> console.warn is used to log warning message to the console. By default the warning message will be highlighted
+        with yellow color. <br> <br>
+        example of console.warn() method: <br>
+        console.warn('This is a warning.'); <br>
+        console.warn("Warning !!"); <br> <br>
+        <img src="console.warn.png" width="100%" height="200" />
+    </p>
+    <script>
+        console.warn("This is a warning");
+        console.warn("Warning !!");
+    </script>
+    <h3 style="text-align: center;"> <a id="clear">console.clear()</a></h3>
+
+    <p>console.clear is used to clear the console. The console will be cleared, in case of Chrome a simple overlayed
+        text will be printed like : <b><i>‘Console was cleared’</i></b> while in firefox no message is returned.</p>
+    <br>
+    Example for console.clear() method <br>
+    var fruits = ["apple", "mango", "banana"]; <br>
+    console.log(fruits);<br>
+    console.clear(); <br> <br>
+    <img src="console.clear.png" width="100%" height="200" />
+    <script>
+        var fruits = ["apple", "mango", "banana"];
+        console.log(fruits);
+        console.clear();
+    </script>
+    <h3 style="text-align: center;"> <a id="time">console.time() and console.timeEnd() </a></h3>
+    <p> <b>time() and timeEnd() </b> methods are provided by the javascript console object. <br> It shows us the amount
+        of time
+        spent by a block or a function.<br>
+        You can start a timer to calculate the duration of a specific operation. To start one, you need to call the
+        console.time() method. <br>
+        To stop the timer, and to get the elapsed time in milliseconds, you need to call the console.timeEnd() method.
+        <br>
+        It can run upto 10,000 times simultaneously on a given page <br>
+        Example of console.time() and console.timeEnd() method <br>
+        console.time("answer time"); <br>
+        alert("Click to continue"); <br>
+        alert("Do a bunch of other stuff"); <br>
+        console.timeEnd("answer time"); <br>
+        It logs the user time to dismiss the alert box.
+        <script>
+            console.time("answer time");
+            alert("Click to continue");
+            alert("Do a bunch of other stuff");
+            console.timeEnd("answer time");
+        </script>
+        <img src="console.time.png" width="100%" height="200" /><br>
+    </p>
+    <br>
+    <h3 style="text-align: center;"> <a id="table">console.table() </a></h3>
+    <p> This method allows us to generate a table inside a console. The input must be an array or an object which will
+        be
+        shown as a table. <br>
+        Example : <br>
+        var a = {
+        name: "Roshini",
+        age:"23",
+        city: "Texas"
+        };
+        var b = {
+        name: "Suraksha",
+        age:"23",
+        city: "Toronto"
+        };
+        var c = {
+        name: "Zahra",
+        age:"56",
+        city: "Texas"
+        };
+        console.table({a,b,c}); <br> <br>
+        <script>
+            var a = {
+                name: "Roshini",
+                age: "23",
+                city: "Texas"
+            };
+            var b = {
+                name: "Suraksha",
+                age: "23",
+                city: "Toronto"
+            };
+            var c = {
+                name: "Zahra",
+                age: "56",
+                city: "Texas"
+            };
+            console.table({ a, b, c });
+        </script>
+        <img src="console.table.png" width="100%" height="200" /><br>
+    </p>
+    <br>
+    <h3 style="text-align: center;"> <a id="count"> console.count()</a></h3>
+    <p> This method outputs the number of times it has been called with that label. If omitted, it behaves as though it
+        was called with the "defualt" label.</p>
+    example :
+    <br>
+    let name = "";
+    function greet() {
+    console.count();
+    return "hi" + name;
+    }
+    name = "Roshini";
+    greet();
+    greet();
+    console.count(); <br> <br>
+    <script>
+        let name = "";
+        function greet() {
+            console.count();
+            return "hi" + name;
+        }
+        name = "Roshini";
+        greet();
+        greet();
+        console.count();
+    </script>
+    <img src="console.count.png" width="100%" height="200" /><br>
+    <br>
+</body>
+
+</html>
