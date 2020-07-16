@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Methods</title>
+</head>
+
+<body>
+    <h2>String Methods</h2>
+
+    <h3>String length()</h3>
+    <p> The length property returns the length of the string(Including space)</p>
+    <script>
+        let txt = "Hi there ! This is the length property of this string";
+        console.log("length of the given string is " + txt.length);
+        document.write(`Hi there ! This is the length property of this string <br> length of the given string is ${txt.length}`);
+    </script> <br>
+
+    <h3>String indexOf()</h3>
+    <p>We make use of indexOf to find the position of a string from the given text</p>
+    <script>
+        let str = "This is a text";
+        console.log(str.indexOf('is'));
+    </script> <br>
+
+    <h3>lastIndexOf()</h3>
+    <p> lastIndexOf is used to find the last occurrence (location/position) of the string/character </p>
+    <script>
+        let txt1 = "Hi there this is the reason we use lastIndexOf()";
+        console.log(txt1.lastIndexOf('o'));
+        console.log(txt1.lastIndexOf('is'));
+    </script>
+    <br>
+
+    <h3>string search()</h3>
+    <p>The search() method searches a string for a specified value and returns the position of the match</p>
+    <script>
+        let text = "Please locate where 'locate' occurs!";
+        console.log(text.search('locate'));
+        console.log(text.search('where'));
+    </script>
+    <br>
+
+    <h3> Slice()</h3>
+    <p>slice() extracts a part of a string and returns the extracted part in a new string. <br> The method takes 2
+        parameters: the start position, and the end position (end not included).</p>
+    <script>
+        let str1 = "Apple, Mango, Banana";
+        console.log(str1.slice(7, 13));
+        console.log(str1);
+        let str2 = str1.slice(7, 13);
+        console.log(str2);
+    </script> <br>
+
+    <h3>substring()</h3>
+    <p>The substring() method returns the part of the string between the start and end indexes, or to the end of the
+        string.</p>
+    <script>
+        let subStr = 'Mozilla';
+        console.log(subStr.substring(1, 3));
+        console.log(subStr.substring(2));
+    </script> <br>
+
+    <h3> subStr()</h3>
+    <p>The substr() method returns a portion of the string, starting at the specified index and extending for a given
+        number of characters afterwards.</p>
+    <script>
+        let subStr1 = 'Mozilla';
+        console.log(subStr1.substr(1, 3));
+        console.log(subStr1.substr(2));
+    </script> <br>
+
+    <h3>replace()</h3>
+    <p>The replace() method replaces a specified value with another value in a string</p>
+    <p> syntax : <b> <i> const newStr = str.replace(regexp|substr, newSubstr|function)</i> </b></p>
+    <script>
+        let rstr = "Please visit Microsoft!";
+        let n = rstr.replace("Microsoft", "W3Schools");
+        console.log(rstr);
+        console.log(n);
+    </script> <br>
+
+    <h3> concat()</h3>
+    <p>Joins 2 or more string</p>
+    <script>
+        let text1 = "Hello";
+        let text2 = "World";
+        let text3 = text1.concat(" ", text2);
+        console.log(text3);
+    </script> <br>
+
+    <h3> trim()</h3>
+    <p>The trim() method removes whitespace from both sides of a string</p>
+    <script>
+        let tstr = "                    heya !!!!!!!!!       "
+        console.log(tstr.trim());
+    </script> <br>
+
+    <h3> charAt()</h3>
+    <p> The charAt() method returns the character at a specified index (position) in a string </p>
+    <script>
+        let char = "Hello People ! Whats up ? ";
+        console.log(char.charAt(8));
+    </script> <br>
+
+    <h3> charCodeAt() </h3>
+    <p> The charCodeAt() method returns the unicode of the character at a specified index in a string <br> The method
+        returns a UTF-16 code (an integer between 0 and 65535)</p>
+    <script>
+        let char1 = "Hello People ! Whats up ? ";
+        console.log(char1.charCodeAt(8));
+        console.log(char1.charCodeAt(0));
+    </script> <br>
+
+    <h3> split()</h3>
+    <p> A string can be converted to an array with the split() method</p>
+    <script>
+        var txts = "a,b,c,d,e";   // String
+        console.log(txts.split(","));          // Split on commas
+        console.log(txts.split(" "));          // Split on spaces
+        console.log(txts.split("|"));          // Split on pipe
+
+        const splitStr = 'The quick brown fox jumps over the lazy dog.';
+        const words = splitStr.split(' ');
+        console.log(words[3]);
+    </script> <br>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <h3>Converting Arrays to Strings</h3>
+    <p> converts an array to a string</p>
+
+    <script>
+        let fruits = ["Banana", "Orange", "Apple", "Mango"];
+        console.log(fruits.toString());
+
+        let name = ["Roshini", "Suraksha", "Gagan", "Nadeem"];
+        console.log(name.toString());
+    </script>
+    <br>
+
+    <h3> join() </h3>
+    <p> The join() method also joins all array elements into a string.<br> It behaves just like toString(), but in
+        addition you can specify the separator</p>
+    <script>
+        let fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+        console.log(fruits1.join("*"));
+    </script>
+    <br>
+
+    <h3>Popping and Pushing</h3>
+    <p>When you work with arrays, it is easy to remove elements and add new elements.This is what popping and pushing
+        is.Popping items out of an array, or pushing items into an array. </p>
+    <h3> Popping</h3>
+    <p> The pop() method removes the last element from an array. The pop() method returns the value that was "popped
+        out"</p>
+    <script>
+        let fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        console.log(fruits2.pop()); // Removes the last element from fruits
+    </script>
+
+    <h3>push()</h3>
+    <p>The push() method adds a new element to an array (at the end)</p>
+    <script>
+        console.log(fruits2.push("kiwi")); // returns the new array's length.
+    </script>
+    <br>
+
+    <h3> Shifting Elements</h3>
+    <p>
+        Shifting is equivalent to popping, working on the first element instead of the last.<br>
+        The shift() method removes the first array element and "shifts" all other elements to a lower index.</p>
+    <script>
+        let fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+        console.log(fruits3.shift()); // Removes the first element "Banana" from fruits
+        console.log(fruits3);
+    </script>
+    <br>
+
+    <h3>unshift()</h3>
+    <p> The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements<br> The
+        unshift() method returns the new array length. </p>
+    <script>
+        let fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+        console.log(fruits.unshift("Lemon")); // Adds a new element "Lemon" to fruits
+    </script>
+    <br>
+
+    <h3>Changing Elements</h3>
+    <p>Array elements are accessed using their index number <br>
+        Array indexes start with 0. [0] is the first array element, [1] is the second, [2] is the third etc </p>
+
+    <script>
+        let fruits5 = ["Banana", "Orange", "Apple", "Mango"];
+        console.log(fruits5[0]);
+        fruits5[0] = "kiwi";
+        console.log(fruits5);
+    </script>
+
+    <h3>length</h3>
+    <p>The length property provides an easy way to append a new element to an array:</p>
+
+    <script>
+        console.log(fruits5.length);
+    </script>
+    <br>
+
+    <h3>Deleting Elements</h3>
+    <p> For deleting arrays, we make use of pop() or shift()</p>
+    <h3> pop()</h3>
+    <p> The pop() method removes the last element from an array and returns that element. This method changes the length
+        of the array.</p>
+    <script>
+        const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+        console.log(plants.pop());
+        console.log(plants);
+        plants.pop();
+        console.log(plants);
+        plants.shift();
+        console.log(plants);
+    </script>
+
+    <h3>Splicing an Array</h3>
+    <p>The splice() method can be used to add new items to an array</p>
+
+    <script>
+        var arr = ["Banana", "Orange", "Apple", "Mango"];
+        arr.splice(2, 0, "Lemon", "Kiwi");
+        console.log(arr)
+    </script> <br>
+</body>
+
+</html>
